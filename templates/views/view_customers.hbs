@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparks Bank | Customers</title>
+
+    <!-- aos css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- google fonts cdn link  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Roboto:wght@100;300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/stylesheet/stylesheet.css">
+
+</head>
+
+<body>
+
+
+    {{>navbar}}
+
+    <section id="view_customers" class="menu">
+
+        <ul class="list" data-aos="fade-down">
+            <a href="/view_customers">
+                <li class="btn">View Customers</li>
+            </a>
+            <a href="/select">
+                <li class="btn">Transfer</li>
+            </a>
+            <a href="/history">
+                <li class="btn">Transaction History</li>
+            </a>
+        </ul>
+
+        <div class="container" data-aos="flip-up">
+            <h1>Customers</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Account balance</th>
+                    </tr>
+                </thead>
+                {{#each customerData}}
+                <tr>
+                    <td>{{first_name}}</td>
+                    <td>{{last_name}}</td>
+                    <td>{{gender}}</td>
+                    <td>{{email}}</td>
+                    <td>{{phone}}</td>
+                    <td>{{acc_balance}}</td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+
+    </section>
+
+    {{>footer}}
+
+
+    <!-- aos js cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="/scripts/script.js"></script>
+
+    <!-- initializing aos  -->
+
+    <script>
+
+        AOS.init({
+            delay: 400,
+            duration: 1000
+        })
+
+    </script>
+
+</body>
+
+</html>
