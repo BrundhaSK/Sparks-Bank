@@ -5,7 +5,6 @@ require("./db/conn");
 const hbs = require("hbs");
 const Customer = require("./models/create_acc");
 const Transaction = require("./models/transfer");
-const alert = require('alert');
 
 const app = express();
 const port = process.env.PORT || 3000;
